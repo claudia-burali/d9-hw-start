@@ -1,5 +1,5 @@
 const initialState = {
-  cart: {
+  favorite: {
     content: [],
   },
 };
@@ -8,9 +8,9 @@ const mainReducer = (state = initialState, action) => {
     case "ADD_TO_FAVORITES":
       return {
         ...state,
-        cart: {
-          ...state.cart,
-          content: state.cart.content.concat(action.payload),
+        favorite: {
+          ...state.favorite,
+          content: state.favorite.content.concat(action.payload),
         },
       };
     default:
